@@ -1,0 +1,953 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar{
+    height: 17vh;
+    width: 100%;
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky; 
+    top: 0;
+}
+
+ul {
+    display: flex;
+    margin-right: 20px;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 20px;
+    padding: 0 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+    border-radius: 8px;
+}
+
+ul li a:hover {
+    color: rgb(12, 0, 0);
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+}
+
+.company-logo img {
+    height: 15vh;
+    width: 15vh;
+    margin-left: 2vh;
+}
+
+.company-name {
+    margin-left: 2vw;
+    font-size: 2rem;
+    color: green;
+}
+
+/* Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-right: 7vh;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none; /* Hide menu by default */
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon on mobile */
+    }
+
+    .company-name {
+        display: none; /* Hide company name on mobile */
+    }
+
+    .company-logo img{
+       margin-right: 7vh;
+    }
+}
+
+/* When the menu is active, show the navbar menu */
+.show {
+    display: flex !important;
+}
+
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.container-1 {
+    width: 100%;
+    min-height: 90vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+
+/* Machine Name Section */
+.machine-name {
+    width: 40vw;
+    background-color: yellowgreen;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.WIRE-DRAWING-MACHINE {
+    color: brown;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Description Section */
+.machine-dic {
+    width: 70vw;
+    background-color: grey;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.discription {
+    color: greenyellow;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* Image Section */
+.machine-1-image {
+    width: 100%;
+    max-height: 90vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.machine-1-image img {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* Set a max width for the image */
+    border-radius: 10px;
+}
+
+/* WhatsApp Logo */
+.whatsAppLogo img {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .machine-name, .machine-dic {
+        width: 80vw; /* Increase the width to fill more space */
+    }
+
+    .WIRE-DRAWING-MACHINE {
+        font-size: 1.8rem;
+    }
+
+    .discription {
+        font-size: 1rem;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    .container-1 {
+        padding: 10px;
+    }
+
+    .machine-name, .machine-dic {
+        width: 90vw; /* Full width for smaller devices */
+    }
+
+    .WIRE-DRAWING-MACHINE {
+        font-size: 1.5rem;
+    }
+
+    .discription {
+        font-size: 0.9rem;
+    }
+
+    .machine-1-image img {
+        max-width: 90%; /* Smaller image for mobile */
+    }
+}
+
+/* For Small Mobile Devices */
+@media (max-width: 425px) {
+    .machine-name, .machine-dic {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .WIRE-DRAWING-MACHINE {
+        font-size: 1.2rem;
+    }
+
+    .discription {
+        font-size: 0.8rem;
+    }
+
+    .whatsAppLogo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .machine-1-image img {
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* Search Box Styles */
+.search-box {
+    display: flex;
+    width: 80vw;
+    height: 10vh;
+    background-color: blueviolet;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto; /* Center the search box horizontally */
+    border-radius: 20px;
+    justify-content: space-between; /* Space between the input and icon */
+    align-items: center;
+    padding: 0 20px; /* Add padding to prevent content from touching the edges */
+    position: relative;
+    z-index: -1;
+}
+
+.input-1 {
+    height: 5.5vh;
+    width: 60vw;
+    border-radius: 20px;
+    border: none;
+    padding: 0 20px; /* Add padding for inner space */
+    font-size: 1rem; /* Adjust font size */
+    outline: none; /* Remove default outline */
+}
+
+.search-icon {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer; /* Add cursor pointer to indicate clickability */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .search-box {
+        width: 90vw;
+        height: 8vh;
+    }
+
+    .input-1 {
+        width: 70vw;
+        height: 5vh;
+    }
+
+    .search-icon {
+        font-size: 1.8rem; /* Slightly smaller icon */
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    .search-box {
+        width: 95vw;
+        height: 7vh;
+        padding: 0 15px; /* Reduce padding for smaller screens */
+    }
+
+    .input-1 {
+        width: 75vw;
+        height: 4.5vh;
+        font-size: 0.9rem;
+    }
+
+    .search-icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* For Small Mobile Devices */
+@media (max-width: 425px) {
+    .search-box {
+        width: 100vw;
+        height: 6.5vh;
+        border-radius: 10px; /* Smaller border-radius for small devices */
+    }
+
+    .input-1 {
+        width: 80vw;
+        height: 4vh;
+        font-size: 0.8rem;
+    }
+
+    .search-icon {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+.machine {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding: 20px;
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.machine-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.machine-1:hover {
+    transform: translateY(-10px); /* Hover effect for a floating feel */
+}
+
+.machine-1 img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.Threading {
+    font-size: 1.5rem;
+    color: blueviolet;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .machine {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+    }
+
+    .machine-1 {
+        padding: 15px;
+    }
+
+    .Threading {
+        font-size: 1.3rem;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    .machine {
+        width: 95vw;
+        grid-gap: 1rem;
+    }
+
+    .machine-1 img {
+        max-width: 300px; /* Smaller images for mobile */
+    }
+
+    .Threading {
+        font-size: 1.2rem;
+    }
+}
+
+/* For Small Mobile Devices */
+@media (max-width: 425px) {
+    .machine {
+        width: 100vw;
+    }
+
+    .machine-1 img {
+        max-width: 250px; /* Further reduce image size */
+    }
+
+    .Threading {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+.about-company {
+    background-color: #f4f4f9; /* Light background for contrast */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-company-div {
+    max-width: 1200px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    color: #333;
+}
+
+.about-company-div h3 {
+    color: #4CAF50; /* A fresh, green accent color */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-company-div h4 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-company-div p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .about-company {
+        padding: 40px 15px;
+    }
+
+    .about-company-div {
+        padding: 25px;
+    }
+
+    .about-company-div h3 {
+        font-size: 1.6rem;
+    }
+
+    .about-company-div h4 {
+        font-size: 1.4rem;
+    }
+
+    .about-company-div p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .about-company {
+        padding: 30px 10px;
+    }
+
+    .about-company-div {
+        padding: 20px;
+    }
+
+    .about-company-div h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-company-div h4 {
+        font-size: 1.3rem;
+    }
+
+    .about-company-div p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 425px) {
+    .about-company {
+        padding: 20px 10px;
+    }
+
+    .about-company-div {
+        padding: 15px;
+    }
+
+    .about-company-div h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-company-div h4 {
+        font-size: 1.1rem;
+    }
+
+    .about-company-div p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+.form-container {
+    width: 50%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-container h2 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Form Inputs */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="tel"],
+.form-container input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+}
+
+.form-container input:focus {
+    border: 1px solid #4CAF50;
+    outline: none;
+}
+
+/* Submit Button */
+.form-container button[type="submit"] {
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .form-container {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .form-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-container h2 {
+        font-size: 1rem;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="tel"],
+    .form-container input[type="email"] {
+        font-size: 0.9rem;
+    }
+
+    .form-container button[type="submit"] {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 425px) {
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-container h2 {
+        font-size: 0.9rem;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="tel"],
+    .form-container input[type="email"] {
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+
+    .form-container button[type="submit"] {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+
+
+
+
+h1, h3 {
+    color: #333;
+    text-align: center;
+}
+
+/* Product Section Styling */
+.product-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.product-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin-top: 15px;
+    color: #4CAF50;
+}
+
+.inquiry-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.inquiry-button:hover {
+    background-color: #45a049;
+}
+
+/* Gallery Section Styling */
+.gallery-section {
+    padding: 50px;
+    background-color: #f4f4f9;
+}
+
+.gallery-heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.view-all-product{
+    
+    margin-left: 45%;
+    background-color: #45a049;
+    border-radius: 20px;
+    height: 30px;
+    border: none;
+    color:red;
+    font-size: 20px;
+    font-weight: 200px;
+}
+
+.gallery-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.gallery-slider {
+    display: flex;
+    gap: 30px;
+    animation: scroll-left 20s linear infinite;
+}
+
+.gallery-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.gallery-item h3 {
+    margin-top: 10px;
+    color: #4CAF50;
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* View All Button Styling */
+.product-section button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-section button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries */
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 80%;
+    }
+
+    .gallery-slider {
+        gap: 15px;
+    }
+
+    .gallery-item img {
+        width: 120px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 425px) {
+    .product-container {
+        gap: 10px;
+    }
+
+    .product {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .gallery-slider {
+        gap: 10px;
+    }
+
+    .gallery-item img {
+        width: 100px;
+    }
+
+    h1, h3 {
+        font-size: 1.5rem;
+    }
+
+    .inquiry-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .gallery-heading {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+/* Footer Section Styling */
+.footer-section {
+    background-color: grey; /* Light gray background */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px; /* Max width for large screens */
+    margin: 0 auto; /* Center the footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    gap: 20px; /* Space between sections */
+}
+
+.footer-logo img {
+    width: 150px; /* Logo size */
+    margin-bottom: 15px; /* Space below the logo */
+}
+
+.footer-social {
+    margin: 15px 0; /* Space above and below social icons */
+}
+
+.footer-social a {
+    margin: 0 10px; /* Space between social icons */
+}
+
+.footer-social img {
+    width: 30px; /* Size of social icons */
+}
+
+.footer-info,
+.contact-us {
+    width: 100%; /* Full width */
+}
+
+.footer-info h3,
+.contact-us h3 {
+    margin-bottom: 10px; /* Space below headings */
+}
+
+/* Media Queries */
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .footer-logo img {
+        width: 120px; /* Smaller logo for mobile */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 425px) {
+    .footer-social {
+        display: flex;
+        flex-direction: column; /* Stack social icons */
+    }
+
+    .footer-social a {
+        margin: 5px 0; /* Space between icons */
+    }
+}
